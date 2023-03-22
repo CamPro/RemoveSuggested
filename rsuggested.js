@@ -9,13 +9,14 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 var localize_text = "Gợi ý cho bạn";
 
 var timer = setTimeout(function () { removeSuggested(localize_text); }, 0);
+let timer_sleep = 250;
 
 function nodeInsertedCallback(event)
 {
     clearTimeout(timer);
     timer = setTimeout(function() {
         removeSuggested(localize_text);
-    }, 500);
+    }, timer_sleep);
 };
 
 function removeSuggested(text)
