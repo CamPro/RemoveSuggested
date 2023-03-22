@@ -5,6 +5,7 @@
 
     "version"           : "1.0",
     "minimum_chrome_version": "40",
+    "homepage_url": "https://github.com/CamPro/RemoveSuggested",
 
     "manifest_version"  : 2,
     "icons"             : {
@@ -24,8 +25,7 @@
     },
     "page_action"       : {
         "default_icon"  : "icons/rsuggested-38.png",
-        "default_title" : "RemoveSuggested",
-        "default_popup" : "popup.html"
+        "default_title" : "RemoveSuggested"
     },
     "permissions"       : ["tabs", "storage"],
     "options_ui"      : {

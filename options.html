@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RemoveSuggested Setting</title>
-    <style>
-    </style>
+	<meta charset="utf-8">
+	<title>RemoveSuggested Setting</title>
+	<link href="bootstrap.min.css" rel="stylesheet">
+	<style>
+	</style>
 </head>
 <body>
-    <main class="main">
-
-    </main>
+	<main class="container">
+		<div class="card mb-3">
+			<div class="card-body">
+				<div class="form-group form-check mb-3">
+					<input class="form-check-input" type="checkbox" id="isRemoveSuggested" style="width: 20px; height: 20px;"/>
+					<label class="form-check-label" for="isRemoveSuggested">Remove 'Suggested for You'</label>
+				</div>
+				<div class="form-group form-check mb-3">
+					<input class="form-check-input" type="checkbox" id="isRemoveFbclid" style="width: 20px; height: 20px;"/>
+					<label class="form-check-label" for="isRemoveFbclid">Remove 'fbclid' from Link</label>
+				</div>
+				<div class="form-group mb-3">
+					<input class="form-control" type="text" id="suggestedText" placeholder=" custom suggestion text">
+				</div>
+				<button type="button" class="btn btn-default">Save Option</button>
+			</div>
+		</div>
+	</main>
 </div>
+<script src="jquery-min.js"></script>
 <script src="options.js"></script>
 </body>
 </html>
