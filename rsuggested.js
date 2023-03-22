@@ -15,7 +15,7 @@ function nodeInsertedCallback(event)
     clearTimeout(timer);
     timer = setTimeout(function() {
         removeSuggested(localize_text);
-    }, 1000);
+    }, 500);
 };
 
 function removeSuggested(text)
