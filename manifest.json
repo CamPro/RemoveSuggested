@@ -1,0 +1,35 @@
+{
+    "name"              : "Remove Suggested",
+    "short_name"        : "RemoveSuggested",
+    "description"       : "Remove Suggested for You on Facebook",
+
+    "version"           : "1.0",
+    "minimum_chrome_version": "40",
+
+    "manifest_version"  : 2,
+    "icons"             : {
+        "16"        : "icons/rsuggested-16.png",
+        "48"        : "icons/rsuggested-48.png",
+        "128"       : "icons/rsuggested-128.png"
+    },
+    "content_scripts"   : [{
+        "matches"   : [ "https://*.facebook.com/*",
+                        "http://*.facebook.com/*"],
+        "js"        : ["jquery-min.js", "rsuggested.js"],
+        "run_at"    : "document_end"
+    }],
+    "background"        : {
+        "scripts"   : ["background.js"],
+        "persistent": true
+    },
+    "page_action"       : {
+        "default_icon"  : "icons/rsuggested-38.png",
+        "default_title" : "RemoveSuggested",
+        "default_popup" : "popup.html"
+    },
+    "permissions"       : ["tabs", "storage"],
+    "options_ui"      : {
+        "page"          : "options.html",
+        "chrome_style"  : true
+    }
+}
