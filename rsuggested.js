@@ -9,7 +9,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 var isRemoveSuggested = true;
 var isRemoveFbclid = true;
 var suggestedText = "";
-var suggested_texts = ["Gợi ý cho bạn", "Suggested for you"];
+var suggested_texts = ["Gợi ý cho bạn", "Suggested for you", "Suggested Post"];
 
 var timer = setTimeout(function () { removeFbAds() }, 0);
 let timer_sleep = 500;
