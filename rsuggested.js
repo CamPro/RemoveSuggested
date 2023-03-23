@@ -40,9 +40,6 @@ function nodeInsertedCallback(event)
 
 document.addEventListener("DOMNodeInserted", nodeInsertedCallback);
 
-
-
-
 // FUNCTION REMOVE ADS
 
 function removeOptions()
@@ -101,3 +98,12 @@ function removeAds()
 		$(suggested).parents(feedSelector).remove();
 	})
 }
+function removeTextAsImage()
+{
+	document.querySelectorAll("div.x1cy8zhl.x78zum5.x1nhvcw1.x1n2onr6.xh8yej3[style*='background-image']").forEach(function (elem)
+	{
+		var suggested = elem;
+		$(suggested).parents(feedSelector).remove();
+	})
+}
+
