@@ -11,7 +11,7 @@ var isRemoveFbclid = true;
 var isRemoveAds = true;
 var suggestedText = "";
 
-var suggestedTexts = ["Suggested for you", "Suggested Post", "Gợi ý cho bạn"];
+var suggestedTexts = ["Suggested for you", "Suggested Post", "Gợi ý cho bạn", "Sponsored", "Được tài trợ"];
 
 var feedSelector = "div.x1lliihq, div.x1yztbdb.x1n2onr6.xh8yej3.x1ja2u2z";
 
