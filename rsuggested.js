@@ -13,7 +13,7 @@ var suggestedText = "";
 
 var suggestedTexts = ["Suggested for you", "Suggested Post", "Gợi ý cho bạn", "Sponsored", "Được tài trợ"];
 
-var feedSelector = "div.x1lliihq, div.x1yztbdb.x1n2onr6.xh8yej3.x1ja2u2z";
+var feedSelector = "div.x1lliihq div.x1yztbdb.x1n2onr6.xh8yej3.x1ja2u2z";
 
 var timer = setTimeout(function () { removeOptions() }, 0);
 let timer_sleep = 500;
@@ -45,14 +45,12 @@ document.addEventListener("DOMNodeInserted", nodeInsertedCallback);
 function removeOptions()
 {
 	if (isRemoveSuggested) {
-		//console.log("Remove suggestion");
 		suggestedTexts.forEach(function (text)
 		{
 			removeSuggested(text);
 		})
 	}
 	if (isRemoveFbclid) {
-		//console.log("Remove fbclid");
 		removeFbclidLinkHref();
 	}
 	if (isRemoveAds) {
@@ -92,6 +90,26 @@ function removeFbclidLinkHref()
 }
 function removeAds()
 {
+	// type ads 1
+	var adsUseIds = [];
+	document.querySelectorAll("div.__fb-light-mode text[id][y]").forEach(function (elem)
+	{
+		var suggested = elem;
+		var text = suggested.textContent;
+		if (suggestedTexts.includes(text))
+		{
+			adsUseIds.push('<use xlink:href="#'+suggested.id+'"');
+		}
+	})
+	document.querySelectorAll(feedSelector).forEach(function (elem) {
+		var suggested = elem;
+		adsUseIds.forEach(function (xlinkhref) {
+			if (suggested.innerHTML.includes(xlinkhref)) {
+				suggested.remove();
+			}
+		})
+	})
+	// type ads 2
 	document.querySelectorAll("a[href*='ads/about']").forEach(function (elem)
 	{
 		var suggested = elem;
