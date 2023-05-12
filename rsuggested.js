@@ -1,5 +1,5 @@
 // content script
-console.log("Load content script rsuggested.js");
+//console.log("Load content script rsuggested.js");
 /*
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 	console.log(message)
