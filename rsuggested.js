@@ -11,9 +11,9 @@ var isRemoveFbclid = true;
 var isRemoveAds = true;
 var suggestedText = "";
 
-var suggestedTexts = ["Suggested for you", "Suggested Post", "Gợi ý cho bạn", "Sponsored", "Được tài trợ"];
+var suggestedTexts = ["Suggested for you", "Suggested Post", "Gợi ý cho bạn", "Sponsored", "Được tài trợ", "Bài viết gợi ý từ nhóm công khai", "Dựa trên hoạt động gần đây của bạn"];
 
-var feedSelector = "div.x1lliihq div.x1yztbdb.x1n2onr6.xh8yej3.x1ja2u2z";
+var feedSelector = "div.x1yztbdb.x1n2onr6.xh8yej3.x1ja2u2z";
 
 var timer = setTimeout(function () { removeOptions() }, 0);
 let timer_sleep = 500;
